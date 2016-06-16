@@ -33,7 +33,7 @@ class TestTurnLog < Minitest::Test
     assert_equal(:ladder, @turn_log2.modifier_type)
   end
 
-  def has_space_modifier_type
+  def test_has_space_modifier_type
     assert_equal(:space, @turn_log3.modifier_type)
   end
 end

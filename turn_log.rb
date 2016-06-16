@@ -10,10 +10,19 @@ class TurnLog
 
   def modifier_type
     result = :space
-    @modifier > 0 ? result = :ladder : result = :snake
+
+    if @modifier > 0
+      result = :ladder
+    elsif @modifier < 0 
+    result = :snake
+    end
+
     return result
   end
 end
+
+
+#if this is true, do this , otherwise do this. so a ladder is 2 which is greater than 0 and snake is -7 so less is 0.
 
 #modifier = for example you have a board 3 by 3. on 2 of the squares you have a snake and a ladder. landing on this square 'modifies' your result. i.e if you roll 2 then it will modifiy to 6 (added 4 as modifire:4)
 

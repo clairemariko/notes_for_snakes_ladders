@@ -32,7 +32,7 @@ class Game
 
     @current_player.move(modifier)
 
-    log << TurnLog.new(player: @current_player, roll: spaces, modifier: modifier)
+    @log << TurnLog.new(player: @current_player, roll: spaces, modifier: modifier)#this is the same doing a curly brackets in the brackets, but this is common in ruby so they drop the curly brackeys.
 
     update_current_player
   end
@@ -46,6 +46,12 @@ class Game
 
 end
 
+#ternary has three arguements.it is like doing :
+#if @winner.nil?
+#false
+#else
+#ture
+#end
 
 ##is_won? the player who wins is due to their position being equal to the board.win-tile. 
 
